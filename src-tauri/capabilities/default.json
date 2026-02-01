@@ -1,12 +1,11 @@
 {
   "identifier": "default",
   "description": "Default capability for the main window",
-  "windows": [
-    "main"
-  ],
+  "windows": ["main"],
   "permissions": [
     "core:default",
     "shell:allow-open",
-    "dialog:default"
+    "dialog:default",
+    "fs:allow-read"
   ]
 }
