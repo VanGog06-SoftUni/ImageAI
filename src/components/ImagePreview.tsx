@@ -3,9 +3,15 @@ import styles from "./ImagePreview.module.css";
 
 interface ImagePreviewProps {
   src: string | null;
+  isProcessing?: boolean;
+  processingText?: string;
 }
 
-export default function ImagePreview({ src }: ImagePreviewProps) {
+export default function ImagePreview({
+  src,
+  isProcessing = false,
+  processingText = "Processing...",
+}: ImagePreviewProps) {
   if (!src) {
     return (
       <div className={styles.placeholder}>
@@ -18,6 +24,12 @@ export default function ImagePreview({ src }: ImagePreviewProps) {
   return (
     <div className={styles.previewContainer}>
       <img src={src} alt="Preview" className={styles.image} />
+      {isProcessing && (
+        <div className={styles.loadingOverlay}>
+          <div className={styles.spinner} />
+          <span>{processingText}</span>
+        </div>
+      )}
     </div>
   );
 }

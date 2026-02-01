@@ -15,6 +15,11 @@
   letter-spacing: 0.02em;
 }
 
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .openButton {
   padding: 0.5rem 1rem;
   background: var(--button-bg, #4a4a6a);
@@ -27,10 +32,15 @@
   transition: background 0.2s ease;
 }
 
-.openButton:hover {
+.openButton:hover:not(:disabled) {
   background: var(--button-hover-bg, #5a5a7a);
 }
 
-.openButton:active {
+.openButton:active:not(:disabled) {
   background: var(--button-active-bg, #3a3a5a);
+}
+
+.openButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

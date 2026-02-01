@@ -4,13 +4,22 @@ import ImagePreview from "./components/ImagePreview";
 import { useImageLoader } from "./hooks/useImageLoader";
 
 function App() {
-  const { imageSrc, openImage } = useImageLoader();
+  const { imageSrc, filePath, isProcessing, openImage, applyGrayscale } =
+    useImageLoader();
 
   return (
     <div className={styles.app}>
-      <Header onOpenImage={openImage} />
+      <Header
+        onOpenImage={openImage}
+        onGrayscale={applyGrayscale}
+        isGrayscaleDisabled={!filePath || isProcessing}
+      />
       <main className={styles.main}>
-        <ImagePreview src={imageSrc} />
+        <ImagePreview
+          src={imageSrc}
+          isProcessing={isProcessing}
+          processingText="Applying grayscale..."
+        />
       </main>
     </div>
   );
