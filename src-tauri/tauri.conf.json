@@ -9,6 +9,15 @@
     "beforeBuildCommand": "npm run build"
   },
   "app": {
-    "withGlobalTauri": true
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "Image Transform",
+        "width": 1200,
+        "height": 800,
+        "resizable": true
+      }
+    ]
   }
 }
