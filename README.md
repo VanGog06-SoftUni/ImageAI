@@ -18,13 +18,13 @@ A desktop application for creative image transformations, built with Tauri v2, R
 ### Windows: Rust and linker setup
 
 1. **Set default Rust toolchain** (if you see “no default is configured”):
+
    ```bash
    rustup default stable
    ```
 
 2. **MSVC linker (`link.exe` not found)**  
    The Windows MSVC target needs Visual Studio’s C++ build tools. Use either:
-
    - **Option A (recommended):** Install [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) and select the **“Desktop development with C++”** workload. This installs the MSVC compiler and linker.
 
    - **Option B:** Use the GNU toolchain instead of MSVC:
@@ -40,6 +40,12 @@ npm install
 ```
 
 ## Development
+
+```bash
+npm start
+```
+
+Or alternatively:
 
 ```bash
 npm run tauri dev
