@@ -1,0 +1,13 @@
+.header {
+  padding: 1rem 1.5rem;
+  background: var(--header-bg, #1a1a2e);
+  color: var(--header-color, #eee);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
