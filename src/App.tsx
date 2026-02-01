@@ -1,7 +1,9 @@
+import styles from "./App.module.css";
+
 function App() {
   return (
-    <div>
-      <h1>Image Transform</h1>
+    <div className={styles.app}>
+      <main className={styles.main} />
     </div>
   );
 }
